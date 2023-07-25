@@ -133,7 +133,9 @@ function startTimer() {
       isGameOver = true;
 
       // Reset background color
-      document.querySelector('body').style.backgroundColor = '#222';
+      document.querySelector('body').style.backgroundColor = '#DC3545';
+      document.querySelector('.number').textContent = randomNumber;
+      document.querySelector('.number').style.width = '30rem';
     }
   }, 1000);
 }
