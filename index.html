@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess My Number!</title>
+  </head>
+  <body>
+    <header>
+      <div class="game-settings">
+        <div class="difficulty-wrapper">
+          <label for="difficulty">Difficulty:</label>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <p class="timer">Time left: <span id="time">60</span> seconds</p>
+      </div>
+      <h1>Guess My Number!</h1>
+      <p class="between">(Between 1 and 20)</p>
+      <button class="btn again">Again!</button>
+      <div class="number">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <p class="previous-guess hidden">
+          Previous guess: <span id="prev-guess"></span>
+        </p>
+        <input type="number" class="guess" />
+        <button class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">💯 Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          🥇 Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+
+    <!-- Audio Elements -->
+    <audio id="game-over-sound" src="game-over.mp3" preload="auto"></audio>
+    <audio
+      id="click-button-sound"
+      src="click-button.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="correct-answer-sound"
+      src="correct-answer.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="wrong-answer-sound"
+      src="wrong-answer.mp3"
+      preload="auto"
+    ></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
